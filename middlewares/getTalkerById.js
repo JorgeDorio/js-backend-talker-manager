@@ -1,4 +1,4 @@
-const getData = require('./getData');
+const getData = require('../functions/getData');
 const { SUCCESS, NOT_FOUND } = require('../HTTP_STATUS');
 
 const getTalkerById = async (req, res) => {
