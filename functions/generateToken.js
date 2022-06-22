@@ -5,6 +5,6 @@ const generateToken = (email, password) => {
   const shortToken = token.substring(17, 1);
 
   return shortToken;
-}
+};
 
 module.exports = generateToken;
