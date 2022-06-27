@@ -4,4 +4,5 @@ module.exports = {
   BAD_REQUEST: 400,
   UNAUTHORIZED: 401,
   CREATED: 201,
+  NO_CONTENT: 204,
 };
