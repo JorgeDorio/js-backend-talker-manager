@@ -13,4 +13,3 @@ const putByTalkerId = async (req, res) => {
 };
 
 module.exports = putByTalkerId;
-
