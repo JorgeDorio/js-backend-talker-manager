@@ -2,7 +2,7 @@ const fs = require('fs').promises;
 const { CREATED } = require('../HTTP_STATUS');
 const getData = require('../functions/getData');
 
-const getTalker = async (req, res) => {
+const postTalker = async (req, res) => {
   const data = await getData();
   const lastId = data[data.length - 1].id;
   const newTalker = req.body;
@@ -13,4 +13,4 @@ const getTalker = async (req, res) => {
   return res.status(CREATED).json(newTalker);
 };
 
-module.exports = getTalker;
+module.exports = postTalker;
