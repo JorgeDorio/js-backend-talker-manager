@@ -12,9 +12,11 @@ const verifyTalk = require('./middlewares/verifyTalk');
 const verifyTalkKeys = require('./middlewares/verifyTalkKeys');
 const putTalkerById = require('./routes/putByTalkerId');
 const deleteTalkerById = require('./routes/deleteTalkerById');
+const getTalkerByName = require('./routes/getTalkerByName');
 
 const router = express.Router();
 
+router.get('/talker/search', verifyToken, getTalkerByName);
 router.get('/talker', getTalker);
 router.post('/talker', verifyToken, verifyName, verifyAge, verifyTalk, verifyTalkKeys, postTalker);
 router.get('/talker/:id', getTalkerById);
