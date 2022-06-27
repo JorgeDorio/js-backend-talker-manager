@@ -9,7 +9,7 @@ const getTalker = async (req, res) => {
   newTalker.id = lastId + 1;
   data.push(newTalker);
   const json = JSON.stringify(data);
-  fs.writeFile('../talker.json', json, 'utf-8');
+  await fs.writeFile('./talker.json', json);
   return res.status(CREATED).json(newTalker);
 };
 
