@@ -1,6 +1,6 @@
+const fs = require('fs').promises;
 const { CREATED } = require('../HTTP_STATUS');
 const getData = require('../functions/getData');
-const fs = require('fs').promises;
 
 const getTalker = async (req, res) => {
   const data = await getData();
